@@ -1,0 +1,31 @@
+.property-images {
+  .cursor-pointer {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.features {
+  i {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    color: #0d6efd;
+  }
+}
+
+.amenities {
+  li {
+    margin-bottom: 0.5rem;
+    i {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.card {
+  position: sticky;
+  top: 2rem;
+}

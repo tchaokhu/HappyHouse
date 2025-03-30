@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-property-detail',
   standalone: true,
   imports: [CommonModule, RouterModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  templateUrl: './property-detail.component.html',
+  styleUrl: './property-detail.component.scss'
 })
-export class AppComponent {
-  title = 'property-listing';
+export class PropertyDetailComponent {
+
 }

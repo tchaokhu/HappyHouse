@@ -1,0 +1,99 @@
+<div class="container mt-4">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+      <li class="breadcrumb-item"><a routerLink="/properties">Properties</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Property Details</li>
+    </ol>
+  </nav>
+
+  <div class="row">
+    <div class="col-md-8">
+      <div class="property-images mb-4">
+        <img src="https://via.placeholder.com/800x400" class="img-fluid rounded" alt="Property Main Image">
+        <div class="row mt-3">
+          <div class="col-3" *ngFor="let i of [1,2,3,4]">
+            <img src="https://via.placeholder.com/200x150" class="img-fluid rounded cursor-pointer" alt="Property Thumbnail">
+          </div>
+        </div>
+      </div>
+
+      <div class="property-details">
+        <h1>Luxury Villa with Ocean View</h1>
+        <p class="text-primary h2 mb-4">$750,000</p>
+        
+        <div class="features mb-4">
+          <div class="row">
+            <div class="col-md-3 col-6 mb-3">
+              <i class="bi bi-house-door"></i> 4 Bedrooms
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+              <i class="bi bi-water"></i> 3 Bathrooms
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+              <i class="bi bi-rulers"></i> 3000 sq ft
+            </div>
+            <div class="col-md-3 col-6 mb-3">
+              <i class="bi bi-car-front"></i> 2 Garage
+            </div>
+          </div>
+        </div>
+
+        <h3>Description</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+        <h3>Amenities</h3>
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li><i class="bi bi-check-circle text-success"></i> Swimming Pool</li>
+              <li><i class="bi bi-check-circle text-success"></i> Garden</li>
+              <li><i class="bi bi-check-circle text-success"></i> Security System</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li><i class="bi bi-check-circle text-success"></i> Air Conditioning</li>
+              <li><i class="bi bi-check-circle text-success"></i> Central Heating</li>
+              <li><i class="bi bi-check-circle text-success"></i> Internet</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li><i class="bi bi-check-circle text-success"></i> Furnished</li>
+              <li><i class="bi bi-check-circle text-success"></i> Parking</li>
+              <li><i class="bi bi-check-circle text-success"></i> Gym</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title">Contact Agent</h3>
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Your name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Your email">
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone</label>
+              <input type="tel" class="form-control" id="phone" placeholder="Your phone">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="I'm interested in this property..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

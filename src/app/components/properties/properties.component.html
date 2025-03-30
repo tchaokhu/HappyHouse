@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="row mb-4">
+    <div class="col-md-12">
+      <h1 class="mb-4">Available Properties</h1>
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-3 mb-3">
+              <input type="text" class="form-control" 
+                     placeholder="Search location..." 
+                     [(ngModel)]="filters.location">
+            </div>
+            <div class="col-md-2 mb-3">
+              <select class="form-select" [(ngModel)]="filters.type">
+                <option value="">Property Type</option>
+                <option value="house">House</option>
+                <option value="apartment">Apartment</option>
+                <option value="villa">Villa</option>
+              </select>
+            </div>
+            <div class="col-md-2 mb-3">
+              <select class="form-select" [(ngModel)]="filters.priceRange">
+                <option value="">Price Range</option>
+                <option value="0-300000">$0 - $300,000</option>
+                <option value="300001-600000">$300,001 - $600,000</option>
+                <option value="600001+">$600,001+</option>
+              </select>
+            </div>
+            <div class="col-md-2 mb-3">
+              <select class="form-select" [(ngModel)]="filters.bedrooms">
+                <option value="">Bedrooms</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3+">3+</option>
+              </select>
+            </div>
+            <div class="col-md-3 mb-3">
+              <button class="btn btn-primary w-100" (click)="onSearch()">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let property of properties">
+      <div class="card h-100">
+        <img [src]="property.imageUrl" class="card-img-top" [alt]="property.title" style="height: 200px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title">{{property.title}}</h5>
+          <p class="card-text">{{property.description}}</p>
+          <p class="text-primary fw-bold">${{property.price | number}}</p>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-house-door"></i> {{property.bedrooms}} Bedrooms</li>
+            <li><i class="bi bi-water"></i> {{property.bathrooms}} Bathrooms</li>
+            <li><i class="bi bi-rulers"></i> {{property.area}} sq ft</li>
+            <li><i class="bi bi-geo-alt"></i> {{property.location}}</li>
+          </ul>
+          <a [routerLink]="['/property', property.id]" class="btn btn-outline-primary">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
