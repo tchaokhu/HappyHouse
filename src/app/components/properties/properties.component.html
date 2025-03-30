@@ -6,8 +6,8 @@
         <div class="card-body">
           <div class="row">
             <div class="col-md-3 mb-3">
-              <input type="text" class="form-control" 
-                     placeholder="Search location..." 
+              <input type="text" class="form-control"
+                     placeholder="Search location..."
                      [(ngModel)]="filters.location">
             </div>
             <div class="col-md-2 mb-3">
@@ -35,7 +35,7 @@
               </select>
             </div>
             <div class="col-md-3 mb-3">
-              <button class="btn btn-primary w-100" (click)="onSearch()">Search</button>
+              <button class="btn w-100" (click)="onSearch()">Search</button>
             </div>
           </div>
         </div>
@@ -50,16 +50,16 @@
         <div class="card-body">
           <h5 class="card-title">{{property.title}}</h5>
           <p class="card-text">{{property.description}}</p>
-          <p class="text-primary fw-bold">${{property.price | number}}</p>
+          <p class="text fw-bold">${{property.price | number}}</p>
           <ul class="list-unstyled">
             <li><i class="bi bi-house-door"></i> {{property.bedrooms}} Bedrooms</li>
             <li><i class="bi bi-water"></i> {{property.bathrooms}} Bathrooms</li>
             <li><i class="bi bi-rulers"></i> {{property.area}} sq ft</li>
             <li><i class="bi bi-geo-alt"></i> {{property.location}}</li>
           </ul>
-          <a [routerLink]="['/property', property.id]" class="btn btn-outline-primary">View Details</a>
+          <a [routerLink]="['/property', property.id]" class="btn">View Details</a>
         </div>
       </div>
     </div>
   </div>
-</div> 
+</div>

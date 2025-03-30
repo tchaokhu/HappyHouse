@@ -1,14 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 .btn {
-    background-color: #2A1842; 
+    background-color: #2A1842;
     color: white;
     border: none;
-}
-.btn:hover {
-    background-color: #2a1842af; 
+    &:hover {
+        background-color: #2A1842af;
+    }
 }
 
+// .btn:hover {
+//     background-color: #2a1842af;
+// }
+
 .bi{
-    color: #2A1842; 
+    color: #2A1842;
 }
+
+.text-center{
+  color: #2A1842;
+}
+
+.text{
+  color: #2A1842;
+}
+
+
+
+
+
 
